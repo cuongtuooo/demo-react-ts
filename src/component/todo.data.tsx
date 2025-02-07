@@ -11,7 +11,18 @@ interface IProps {
     isDeveloper: boolean;
 }
 
-const TodoData = (props: IProps) => {
+type TProps = {
+    todos: {
+        id: number,
+        title: string,
+        isComplete: boolean
+    }[];
+    ownwe: string;
+    age: number;
+    isDeveloper: boolean;
+}
+
+const TodoData = (props: TProps) => {
     const { todos } = props;
     return (
         <div>
