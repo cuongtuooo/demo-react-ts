@@ -1,5 +1,17 @@
 // [1] [2] [3]  //number[]
 
+// dung type ở trường hợp thuộc tính đơn lẻ, interface cho đối tượng
+type TColor = "yeallow" | "red" | "blue";
+const mau: TColor = "red";
+
+// có thể kết hợp cả 2
+
+interface IColor {
+    colors: TColor;
+}
+
+const color: IColor = { colors: "yeallow" };
+
 interface IProps {
     todos: {
         id: number,
@@ -23,7 +35,7 @@ type TProps = {
 }
 
 const TodoData = (props: TProps) => {
-    const { todos } = props;
+    const { todos, ownwe, age } = props;
     return (
         <div>
             {/* {JSON.stringify(prop)} */}
@@ -37,6 +49,8 @@ const TodoData = (props: TProps) => {
                     </div>
                 )
             })}
+
+            {age} {ownwe} {mau}
         </div>
     )
 }
