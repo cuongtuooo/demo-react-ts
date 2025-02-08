@@ -28,6 +28,10 @@ const TodoList = () => {
 
     const [listTodo, setListTodo] = useState<ITodo[]>([]);
 
+    const addNewTodo = (todo: ITodo) => {
+        setListTodo([...listTodo, todo])
+    }
+
     return (
         <div style={{
             width: "600px",
@@ -47,7 +51,7 @@ const TodoList = () => {
             {/* <hr /> */}
             <br />
             <TodoInput
-                name="Your todo"
+                addNewTodo={addNewTodo}
             />
             <TodoData
                 todos={listTodo}
