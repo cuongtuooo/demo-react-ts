@@ -14,12 +14,10 @@ const TodoData = (props: IProps) => {
     const { todos, ownwe = "default", age = "default age" } = props;
     return (
         <div>
-            <div>{ownwe}</div>
-            <div>{age}</div>
             {todos.map(item => {
                 return (
                     <div key={item.id}>
-                        <div>{item.title}</div>
+                        <div style={{ padding: "10px 0" }} >{item.title}</div>
                     </div>
                 )
             })}
